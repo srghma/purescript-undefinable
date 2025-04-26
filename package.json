@@ -4,7 +4,14 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "purs:compile": "purs compile 'src/**/*.purs' 'test/**/*.purs' 'bower_components/purescript-*/src/**/*.purs' 2>&1",
-    "test": "node -e 'require(\"./output/Test.Main\").main()'"
+    "build": "eslint src examples && spago build --censor-stats --strict --ensure-ranges --pedantic-packages",
+    "test": "spago test --offline --strict --pedantic-packages",
+    "build:example": "spago build --censor-stats --strict --ensure-ranges --pedantic-packages"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0",
+    "@eslint/compat": "^1.2.8"
   }
 }

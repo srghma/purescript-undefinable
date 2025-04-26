@@ -1,11 +1,3 @@
-'use strict';
-
-exports['undefined'] = undefined;
-
-exports.undefinable = function undefinable(nothing, just, value){
-  return value === undefined ? nothing : just(value);
-};
-
-exports.notUndefined = function notUndefined(value){
-  return value;
-};
+const undefinedImpl = undefined;
+export { undefinedImpl as undefined };
+export const undefinable = (a, nothing, just) => a === undefined ? nothing : just(a);

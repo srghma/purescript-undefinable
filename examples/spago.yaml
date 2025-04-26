@@ -1,0 +1,15 @@
+package:
+  name: undefinable-example
+  dependencies:
+    - effect
+    - prelude
+    - maybe
+    - functions
+    - undefinable
+    - console
+workspace:
+  packageSet:
+    registry: 64.4.0
+  extraPackages:
+    undefinable:
+      path: ..

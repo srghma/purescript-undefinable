@@ -1,0 +1,23 @@
+package:
+  name: undefinable
+  description: A library for dealing with undefined javascript variables
+  publish:
+    license: MIT
+    version: 4.0.0
+    location:
+      githubOwner: ethul
+      githubRepo: purescript-undefinable
+  dependencies:
+    - effect
+    - prelude
+    - maybe
+    - functions
+  test:
+    main: Test.Main
+    dependencies:
+      - console
+      - assert
+workspace:
+  packageSet:
+    registry: 64.4.0
+  extraPackages: {}
