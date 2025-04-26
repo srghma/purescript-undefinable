@@ -10,6 +10,14 @@ import Test.Assert (assertEqual)
 main :: Effect Unit
 main = do
   assertEqual
+    { actual: show $ toUndefinable (Nothing :: Maybe Number)
+    , expected: "undefined"
+    }
+  assertEqual
+    { actual: show $ toUndefinable (Just 42)
+    , expected: "42"
+    }
+  assertEqual
     { actual: toMaybe $ toUndefinable (Nothing :: Maybe Number)
     , expected: Nothing
     }

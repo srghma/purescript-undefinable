@@ -8,15 +8,15 @@ package:
       githubOwner: ethul
       githubRepo: purescript-undefinable
   dependencies:
-    - effect
-    - prelude
-    - maybe
     - functions
+    - maybe
+    - prelude
+    - unsafe-coerce
   test:
     main: Test.Main
     dependencies:
-      - console
       - assert
+      - effect
 workspace:
   packageSet:
     registry: 64.4.0
